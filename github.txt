@@ -1,0 +1,66 @@
+Someone plops you into the middle of this directory system. What command will allow you to know what your absolute path is? 
+pwd
+
+Your terminal tells you that ̃/music/ is your absolute path. What command will allow you view all of the directories and files inside of ̃/music/? What files should be listed?
+ls -a, this will list all the unhidden files
+ 						
+What command(s) will allow you to open up patterns.txt inside of ̃/music/ and edit the file?
+nano patterns.txt
+ 						
+What command will allow you to print the file on your terminal instead of opening it up in a text editor?
+cat pattern.txt
+ 						
+Bonus: What command will allow you to see the difference between patterns.txt and symmetry.txt?
+diff patterns.txt symmetry.txt
+ 						
+What command will allow you to move patterns.txt to ̃/math/calculus/?
+mv ~/music/patterns.txt ~/math/calculus/patterns.txt
+ 	
+					
+What command will allow you to remove triangle.txt from ̃/math/geometry?
+rm triangle.txt
+ 						
+The file patterns.txt is now only located at ̃/math/calculus/patterns .txt. What singular command will allow you (the user) to move from  ̃/music/ to ̃/math/? (Hint: What is your relative path to ̃/math/?)
+cd .. /math/
+ 						
+Your absolute path is now ̃/math/. What command would make math/ a local git repository?
+git init 					
+The math/ directory is now a local git repository. How would you connect your local math/ repository with a remote math/ repository?
+Git remote add origin <SSH remote url> 						
+Your local math/ repository is now connected to a remote one. What command will allow you to copy symmetry.txt from ̃/music/ to your local math/ repository?
+Git clone symmetry.txt
+						
+What command will allow you to view the current state of your working directory and staging area? Is git currently tracking symmetry.txt, why or why not?
+pwd and git diff, git will not be tracking symmetry.txt because is has not been pulled or pushed to git. 
+ 						
+What command adds only the copy of symmetry.txt to your math/ stag- ing area? What command adds all changes to all files and directories to your staging area?
+‘Git add symmetry.txt’ or ‘git add .’ to add all files 						
+The file symmetry.txt is now in your staging area. Is git currently track- ing symmetry.txt? Bonus: What command would allow you to unstage symmetry.txt?
+Git is now tracking symmetry.txt. Git reset will ustage the file 					
+
+
+	
+What command will allow you to commit your staged files to your local repository? Include the message.
+git commit -m “”
+ 						
+Your staged files have now been committed to your local repository. What command will allow you to push your local repository to your remote repository. What branch should you be pushing to? Why?	
+git push origin main  Pushing to main because a new branch was never created			
+
+What command will allow you to make a new branch off of math/ called applied math?
+git branch new applied math
+ 						
+What command will allow you to move into the applied math branch?
+Git checkout applied math
+ 						
+You are now located inside of the applied math branch. You make a new directory called physics/ and inside of that directory you make a file called mechanics.txt with some fun facts in it. How would you push all of these changes to your remote repository? What would happen if you switched back to your original branch before committing these changes? 
+git add . → git commit -m “” → git push origin applied math
+
+If you switch back to your original branch before committing git will get confused and you will lose all the changes						
+What command will list all of your branches? What branch will be cur- rently highlighted in green?
+git branch : the branch you are on will be highlighted green
+
+What command will allow you to move back to your original branch?
+	git checkout main
+Bonus: What command will allow you to combine applied math with your original branch?
+Git merge applied math
+
